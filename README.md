@@ -14,20 +14,24 @@ selected between 1 and _r*d_, with some constant
 _r_. The selected integer is then plugged into
 both sides of the system and their results are
 then checked for equality.
+
 There is a chance of this algorithm giving a
 false positive, due to possibly choosing one
 of the _d_ roots of the polynomial at random.
 As the book suggests, and assuming uniform
 random selection, the probability of selecting
 a root is _d_/_r*d_, or 1/_r_. 
+
 As such, one idea for making false positive
 results less probable is to increase the value
 of _r_.
+
 Another idea is to perform _k_ independent
 random selections, only giving a positive
 result if all selections demonstrate equality.
 This method has (1/_r_)^_k_ of being wrong,
 so it is exponentially small for large _k_.
+
 Finally, to completely remove the chance of
 being incorrect, the algorithm may choose
 _d_+1 distinct numbers to use. Since there
